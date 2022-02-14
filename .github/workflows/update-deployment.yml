@@ -1,10 +1,16 @@
-name: Receive Dispatch
+name: Repository Dispatch
 on:
   repository_dispatch:
-    types: [event_name]
+    types:
+      - my-custom-event
 jobs:
-  echo:
+  handle-dispatch:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        run: echo ${{ github.event.client_payload }}
+      - name: Print commit hash
+        run: echo ${{ github.event.client_payload.sha }}
+
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.client_payload.ref }}
