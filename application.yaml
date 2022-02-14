@@ -1,0 +1,23 @@
+apiVersion: ar
+kind: Application
+metadata:
+  name: static-app
+  namespace: argocd
+spec:
+  proyect: defult
+  
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: sample
+  source:
+    repoURL: https://github.com/safernandez666/GithubGitOps.git
+    targetRevision: HEAD
+    path: dev
+
+  syncPolicy:
+    sysnOptions:
+    - createNamespace=true
+
+    automated:
+      selfHeal: true
+      prune: true
