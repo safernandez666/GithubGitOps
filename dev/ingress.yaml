@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: static-app-ingress
+  namespace: sample
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+    - host: dev.static-app.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix  
+            backend:
+              service:
+                name: static-web-service
+                port:
+                  number: 80

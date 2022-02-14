@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: static-web-deployment
+  namespace: sample
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: static-app
+    spec:
+      containers:
+      - name: static-app-container
+        image: safernandez666/app:latest
+        ports:
+        - containerPort: 80
+  selector:
+    matchLabels:
+      app: static-app
