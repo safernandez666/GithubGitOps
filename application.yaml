@@ -4,7 +4,7 @@ metadata:
   name: static-app
   namespace: argocd
 spec:
-  proyect: defult
+  project: default
   
   destination:
     server: https://kubernetes.default.svc
