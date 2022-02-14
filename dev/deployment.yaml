@@ -11,10 +11,10 @@ spec:
         app: static-app
     spec:
       containers:
-      - name: static-app-container
-        image: safernandez666/app:latest
-        ports:
-        - containerPort: 80
+        - name: static-app-container
+          image: safernandez666/app:c2ec0d80acc699912ad4fb1a3dd63b38b81c6031
+          ports:
+            - containerPort: 80
   selector:
     matchLabels:
       app: static-app
