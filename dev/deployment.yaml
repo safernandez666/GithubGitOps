@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
         - name: static-app-container
-          image: safernandez666/app:c2ec0d80acc699912ad4fb1a3dd63b38b81c6031
+          image: safernandez666/app:0574c624182e1773172940572abdb556326ed33e
           ports:
             - containerPort: 80
   selector:
