@@ -9,6 +9,7 @@ The Key GitOps Principles:
     Software agents ensure correctness and alert on divergence.
 
 Some Pros of GitOps:
+
     Faster deployments
     Safer deployments
     Easier rollbacks
@@ -16,4 +17,4 @@ Some Pros of GitOps:
     Better traceability
     Eliminating configuration drift
 
-FR-NLrLE673egaro
+
