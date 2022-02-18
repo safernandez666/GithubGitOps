@@ -18,3 +18,23 @@ Some Pros of GitOps:
     Eliminating configuration drift
 
 
+Install ArgoCD
+
+```
+kubectl create namespace argocd
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+```
+
+Adquire the password. The user name is admin
+
+```
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
+```
+
+Download the repository and apply the configuration
+
+```
+kubectl apply -f application.yaml 
+```
+
+
