@@ -15,7 +15,6 @@ spec:
           image: safernandez666/app:d68a1b90d8ee3faf873e6450e35a925547adfe4d
           ports:
             - containerPort: 80
-      revisionHistoryLimit: 2
   selector:
     matchLabels:
       app: static-app
