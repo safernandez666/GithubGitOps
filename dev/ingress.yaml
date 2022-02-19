@@ -7,7 +7,7 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-    - host: dev.192.168.205.129.nip.io
+    - host: dev.static-app.com
       http:
         paths:
           - path: /
