@@ -6,6 +6,10 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
+  tls:
+    - secretName: 192-168-205-129-nip-io-tls
+      hosts:
+        - '*.192.168.205.129.nip.io'
   rules:
     - host: dev.192.168.205.129.nip.io
       http:
